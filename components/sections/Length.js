@@ -8,17 +8,17 @@ const lengths = [
 ]
 
 const Length = () => {
-    const [nominator, setNominator] = useState(1);
+    const [nominator, setNominator] = useState(0);
 
-    function convert(factor) {
-        setNominator(factor)
+    function callback(eValue) {
+        setNominator(eValue)
     }
 
     return (
         <div className="form-control w-full flex flex-col gap-5 mb-2">
-            {nominator}
+            <div>Nominator: {nominator}</div>
             {lengths.map((length) => {
-                return <Input key={length.name} nominator={nominator} {...length} convert={convert}/>
+                return <Input callback={callback} key={length.name} nominator={nominator} {...length}/>
             })}
         </div>
     );
