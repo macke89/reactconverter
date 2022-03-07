@@ -1,17 +1,15 @@
-import {useState} from "react";
+const Input = ({id, name, rate, nominator, callback}) => {
 
-const Input = ({name, rate, nominator, callback}) => {
-    const [value, setValue] = useState(nominator * rate);
-
+    let value = nominator * rate
     const change = event => {
-        setValue(event.target.value)
-        callback(event.target.value)
+        value = event.target.value / rate
+        callback(value)
     }
     return (
-        <label className="input-group">
+        <label className="input-group" key={id}>
             <span className="w-1/4">{name}</span>
             <input type="number" placeholder={name}
-                   className="input input-bordered w-3/4"
+                   className="input input-bordered input-xs w-3/4 max-w-xs"
                    value={value}
                    onChange={change}
                    step={1}

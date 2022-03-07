@@ -2,9 +2,14 @@ import React, {useState} from 'react';
 import Input from "../Input";
 
 const lengths = [
-    {name: "cm", rate: 1},
-    {name: "m", rate: 100},
-    {name: "km", rate: 100000},
+    {name: "cm", rate: 100000},
+    {name: "inches", rate: 39370.1},
+    {name: "foot", rate: 3280.84},
+    {name: "yard", rate: 1093.61},
+    {name: "m", rate: 1000},
+    {name: "miles", rate: 1.60934},
+    {name: "km", rate: 1},
+    {name: "nautic mile", rate: 0.539957},
 ]
 
 const Length = () => {
@@ -16,10 +21,10 @@ const Length = () => {
 
     return (
         <div className="form-control w-full flex flex-col gap-5 mb-2">
-            <div>Nominator: {nominator}</div>
-            {lengths.map((length) => {
-                return <Input callback={callback} key={length.name} nominator={nominator} {...length}/>
-            })}
+            {lengths.map(length => (
+                <Input key={length.name} name={length.name} rate={length.rate} nominator={nominator}
+                       callback={callback}/>
+            ))}
         </div>
     );
 };

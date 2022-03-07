@@ -1,9 +1,10 @@
 import Header from "/components/sections/Header"
 import Footer from "../components/sections/Footer";
 import Length from "../components/sections/Length";
-import React from "react";
+import React, {useState} from "react";
 
 export default function Home() {
+    const [show, setShow] = useState('lengths');
     return (<>
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
@@ -14,7 +15,8 @@ export default function Home() {
                         <button className="btn">Button</button>
                         <button className="btn">Button</button>
                     </div>
-                    <Length/>
+                    {show === 'lengths' && <Length/>}
+                    {show === 'lengths' && <Length/>}
                 </div>
             </main>
             <Footer/>
