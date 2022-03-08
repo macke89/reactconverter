@@ -20,7 +20,7 @@ export default function Home() {
                     <div className="btn-group mb-10">
                         <button onClick={() => handleChoice('lengths')} className={`btn ${show === 'lengths' && 'btn-active'}`}>Lengths</button>
                         <button onClick={() => handleChoice('weights')} className={`btn ${show === 'weights' && 'btn-active'}`}>Weights</button>
-                        <button onClick={() => handleChoice('temperatures')} className={`btn ${show === 'temperatures' && 'btn-active'}`}>Button</button>
+                        <button onClick={() => handleChoice('temperatures')} className={`btn ${show === 'temperatures' && 'btn-active'}`}>Temperatures</button>
                     </div>
                     {show === 'lengths' && <Length/>}
                     {show === 'weights' && <Weights/>}
