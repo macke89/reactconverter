@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import Input from "../Input";
 import InputC from "../InputC";
 
-// TODO Fix this
+// DONE Fix this
 
 const temperatures = [
     {name: "fahrenheit", rate: 1},
