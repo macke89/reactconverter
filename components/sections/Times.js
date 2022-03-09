@@ -19,8 +19,7 @@ const Times = () => {
     return (
         <div className="form-control w-full flex flex-col gap-5 mb-2">
             {times.map(time => (
-                <Input key={time.name} name={time.name} rate={time.rate} nominator={nominator}
-                       callback={callback}/>
+                <Input key={time.name} name={time.name} rate={time.rate} nominator={nominator} callback={callback}/>
             ))}
         </div>
     );

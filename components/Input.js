@@ -1,11 +1,10 @@
 const Input = ({id, name, rate, nominator, callback}) => {
 
-    function checkValue(value) {
+    function checkValue(nominator) {
         // TODO Fix this
         let newValue = (nominator * rate).toFixed(2)
-        console.log(newValue)
-        if(newValue.toString.indexOf(".00") === true){
-            return 5
+        if(newValue.toString().includes(".00") === true){
+            return parseFloat(newValue).toFixed(0)
         }
         return newValue
     }
