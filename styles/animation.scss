@@ -1,0 +1,9 @@
+.btn1 {
+  opacity: .5;
+  transition: all 500ms;
+
+  &.btn1:hover {
+    opacity: 1;
+  }
+}
+
