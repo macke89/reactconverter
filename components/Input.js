@@ -1,9 +1,9 @@
 const Input = ({id, name, rate, nominator, callback}) => {
 
     function checkValue(nominator) {
-        // TODO Fix this
+        // DONE Fix this
         let newValue = (nominator * rate).toFixed(2)
-        if(newValue.toString().includes(".00") === true){
+        if (newValue.toString().includes(".00") === true) {
             return parseFloat(newValue).toFixed(0)
         }
         return newValue
@@ -18,12 +18,14 @@ const Input = ({id, name, rate, nominator, callback}) => {
     return (
         <label className="input-group" key={id}>
             <span className="w-1/4">{name}</span>
-            <input type="number" placeholder={name}
-                   className="input input-bordered input w-3/4 max-w-xs"
-                   value={checkValue(nominator)}
-                   onChange={handleChange}
-                   step={1}
-                   onFocus={handleFocus}
+            <input
+                type="number"
+                placeholder={name}
+                className="input input-bordered input w-3/4 max-w-xs"
+                value={checkValue(nominator)}
+                onChange={handleChange}
+                step={1}
+                onFocus={handleFocus}
             />
         </label>
     );
