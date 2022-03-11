@@ -6,4 +6,22 @@
   opacity: 1;
 }
 
+.btn2 {
+  animation: color-change 1s linear 0.5s both infinite alternate;
+}
+.btn2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: #1748d7;
+    border-color: chartreuse;
+  }
+  100% {
+    background-color: #1ba5d7;
+    border-color: red;
+  }
+}
+
 /*# sourceMappingURL=animation.css.map */
