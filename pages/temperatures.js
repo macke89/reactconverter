@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import InputC from "../InputC";
+import InputC from "../components/InputC";
+import Header from "../components/sections/Header";
+import Footer from "../components/sections/Footer";
 
 // DONE Fix this
 
@@ -33,10 +35,18 @@ const Temperatures = () => {
     }
 
     return (
-        <div className="form-control w-full flex flex-col gap-5 mb-2">
-            <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
-            <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
-            <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
+        <div className="min-h-screen flex flex-col justify-between">
+            <Header/>
+            <main className="flex justify-center w-full">
+                <div>
+                    <div className="form-control w-full flex flex-col gap-5 mb-2">
+                        <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
+                        <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
+                        <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
+                    </div>
+                </div>
+            </main>
+            <Footer/>
         </div>
     );
 };
