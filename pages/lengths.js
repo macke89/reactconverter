@@ -24,7 +24,7 @@ const Lengths = () => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
-            <main className="flex justify-center w-full">
+            <main className="flex justify-center w-full p-2">
                 <div>
                     <div className="form-control w-full flex flex-col gap-5 mb-2">
                         {lengths.map(length => (

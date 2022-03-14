@@ -4,7 +4,7 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 
 const weights = [
-    {id: 1, name: "g", rate: 1000000},
+    {id: 1, name: "gram", rate: 1000000},
     {id: 2, name: "ounce", rate: 35274},
     {id: 3, name: "kg", rate: 1000},
     {id: 4, name: "stone", rate: 2204.62},

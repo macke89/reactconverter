@@ -1,5 +1,5 @@
 import React from 'react';
-
+// TODO Do Footer
 const Footer = () => {
     return (
         <footer className="flex justify-between">
