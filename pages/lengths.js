@@ -25,17 +25,15 @@ const Lengths = () => {
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
             <main className="flex justify-center w-full p-2">
-                <div>
-                    <div className="form-control w-full flex flex-col gap-5 mb-2">
-                        {lengths.map(length => (
-                            <Input
-                                key={length.id}
-                                name={length.name}
-                                rate={length.rate}
-                                nominator={nominator}
-                                callback={callback}/>
-                        ))}
-                    </div>
+                <div className="form-control w-full flex flex-col gap-5 mb-2">
+                    {lengths.map(length => (
+                        <Input
+                            key={length.id}
+                            name={length.name}
+                            rate={length.rate}
+                            nominator={nominator}
+                            callback={callback}/>
+                    ))}
                 </div>
             </main>
             <Footer/>

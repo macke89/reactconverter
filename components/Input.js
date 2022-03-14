@@ -15,7 +15,8 @@ const Input = ({id, name, rate, nominator, callback}) => {
     const handleFocus = (event) => event.target.select();
 
     return (
-        <label className="input-group" key={id}>
+        <label className="input-group input-group-vertical">
+            <span className="w-full capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2">{name}</span>
             <input
                 type="number"
                 placeholder={name}
@@ -23,9 +24,7 @@ const Input = ({id, name, rate, nominator, callback}) => {
                 value={checkValue(nominator)}
                 onChange={handleChange}
                 step={1}
-                onFocus={handleFocus}
-            />
-            <span className="w-full capitalize">{name}</span>
+                onFocus={handleFocus}/>
         </label>
     );
 };

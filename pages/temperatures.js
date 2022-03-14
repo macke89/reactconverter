@@ -37,13 +37,11 @@ const Temperatures = () => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
-            <main className="flex justify-center w-full">
-                <div>
-                    <div className="form-control w-full flex flex-col gap-5 mb-2">
-                        <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
-                        <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
-                        <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
-                    </div>
+            <main className="flex justify-center w-full p-2">
+                <div className="form-control w-full flex flex-col gap-5 mb-2">
+                    <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
+                    <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
+                    <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
                 </div>
             </main>
             <Footer/>

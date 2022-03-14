@@ -17,7 +17,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="dropdown dropdown-end">
-                    <label tabIndex="0" className="btn m-1 btn-primary">Measures</label>
+                    <label tabIndex="0" className="btn m-1 btn-primary font-bold">Measures</label>
                     <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <Link href="/lengths">
                             <a className={`btn btn-ghost ${useRouter().pathname === "/lengths" && "btn-active"}`}>Lengths</a>

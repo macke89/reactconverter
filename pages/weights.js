@@ -24,18 +24,16 @@ const Weights = () => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
-            <main className="flex justify-center w-full">
-                <div>
-                    <div className="form-control w-full flex flex-col gap-5 mb-2">
-                        {weights.map(weight => (
-                            <Input
-                                key={weight.id}
-                                name={weight.name}
-                                rate={weight.rate}
-                                nominator={nominator}
-                                callback={callback}/>
-                        ))}
-                    </div>
+            <main className="flex justify-center w-full p-2">
+                <div className="form-control w-full flex flex-col gap-5 mb-2">
+                    {weights.map(weight => (
+                        <Input
+                            key={weight.id}
+                            name={weight.name}
+                            rate={weight.rate}
+                            nominator={nominator}
+                            callback={callback}/>
+                    ))}
                 </div>
             </main>
             <Footer/>
