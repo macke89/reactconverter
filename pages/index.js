@@ -1,58 +1,33 @@
-import Header from "/components/sections/Header"
+import Header from "/components/sections/Header";
 import Footer from "../components/sections/Footer";
 import React, {useState} from "react";
+import IndexCard from "../components/IndexCard";
+import {GiWeight} from "react-icons/gi";
+import {BsRulers, BsClockFill, BsThermometerHalf} from "react-icons/bs";
+import {FaTemperatureLow} from "react-icons/fa";
+
+const cards = [
+    {id: 1, name: "length", icon: <BsRulers size={50}/>},
+    {id: 2, name: "weight", icon: <GiWeight size={50}/>},
+    {id: 3, name: "time", icon: <BsClockFill size={50}/>},
+    {id: 4, name: "temp", icon: <BsThermometerHalf size={50}/>},
+]
 
 export default function Home() {
     const [show, setShow] = useState('lengths');
 
-    function handleChoice(value){
+    function handleChoice(value) {
         console.log('change');
         setShow(value)
     }
+
     return (<>
         <div data-theme="corporate" className="min-h-screen flex flex-col justify-between">
             <Header/>
-            <main className="grid grid-cols-2 grid-rows-2">
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+            <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4">
+                {cards.map(card => (
+                    <IndexCard name={card.name} icon={card.icon}/>
+                ))}
             </main>
             <Footer/>
         </div>

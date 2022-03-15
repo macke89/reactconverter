@@ -1,0 +1,19 @@
+.mo_container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.mo_dummy {
+  margin-top: 100%;
+}
+
+.mo_element {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=snippets.css.map */
