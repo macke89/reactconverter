@@ -21,7 +21,7 @@ const Times = () => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <Header/>
-            <main className="flex justify-center w-full p-2">
+            <main className="flex justify-center w-full p-4">
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
                     {times.map(time => (
                         <Input
