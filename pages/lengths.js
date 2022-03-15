@@ -8,7 +8,7 @@ const lengths = [
     {id: 2, name: "inches", rate: 39370.1},
     {id: 3, name: "foot", rate: 3280.84},
     {id: 4, name: "yard", rate: 1093.61},
-    {id: 5, name: "m", rate: 1000},
+    {id: 5, name: "meter", rate: 1000},
     {id: 6, name: "miles", rate: 1.60934},
     {id: 7, name: "km", rate: 1},
     {id: 8, name: "nautic mile", rate: 0.539957},

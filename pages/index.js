@@ -7,10 +7,10 @@ import {BsRulers, BsClockFill, BsThermometerHalf} from "react-icons/bs";
 import {FaTemperatureLow} from "react-icons/fa";
 
 const cards = [
-    {id: 1, name: "length", icon: <BsRulers size={50}/>},
-    {id: 2, name: "weight", icon: <GiWeight size={50}/>},
-    {id: 3, name: "time", icon: <BsClockFill size={50}/>},
-    {id: 4, name: "temp", icon: <BsThermometerHalf size={50}/>},
+    {id: 1, name: "length", icon: <BsRulers size={50}/>, link: "/lengths"},
+    {id: 2, name: "weight", icon: <GiWeight size={50}/>, link: "/weights"},
+    {id: 3, name: "time", icon: <BsClockFill size={50}/>, link: "/times"},
+    {id: 4, name: "temp", icon: <BsThermometerHalf size={50}/>, link: "/temperatures"},
 ]
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
             <Header/>
             <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4">
                 {cards.map(card => (
-                    <IndexCard name={card.name} icon={card.icon}/>
+                    <IndexCard name={card.name} icon={card.icon} link={card.link}/>
                 ))}
             </main>
             <Footer/>
