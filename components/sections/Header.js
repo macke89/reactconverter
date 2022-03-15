@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from 'react'
 import Link from "next/link"
 import {useRouter} from 'next/router'
 
@@ -10,14 +10,14 @@ const Header = () => {
     }, [])
     return (
         <header>
-            <nav className="navbar bg-base-100">
+            <nav className="navbar bg-base-200">
                 <div className="flex-1">
                     <Link href="/">
-                        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <a className="btn btn-ghost normal-case text-xl">CONVERT<span className="text-cyan-700">ALL</span></a>
                     </Link>
                 </div>
                 <div className="dropdown dropdown-end">
-                    <label tabIndex="0" className="btn m-1 btn-primary font-bold">Measures</label>
+                    <label tabIndex="0" className="btn m-1 btn-secondary font-bold transition-all duration-300">Measures</label>
                     <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <Link href="/lengths">
                             <a className={`btn btn-ghost ${useRouter().pathname === "/lengths" && "btn-active"}`}>Lengths</a>
