@@ -13,13 +13,33 @@ const times = (nominator) => {
 const TimeCounter = ({nominator}) => {
     let variables = times(nominator)
     return (
-        <div>
-            <h1>Nominator: {nominator}</h1>
-            <div>{variables[0]} weeks</div>
-            <div>{variables[1]} days</div>
-            <div>{variables[2]} hours</div>
-            <div>{variables[3]} minutes</div>
-            <div>{variables[4]} seconds</div>
+        <div className="stats stats-horizontal lg:stats-horizontal shadow">
+
+            <div className="stat text-center">
+                <div className="stat-title">Weeks</div>
+                <div className="stat-value">{variables[0]}</div>
+            </div>
+
+            <div className="stat text-center">
+                <div className="stat-title">days</div>
+                <div className="stat-value">{variables[1]}</div>
+            </div>
+
+            <div className="stat text-center">
+                <div className="stat-title">hours</div>
+                <div className="stat-value">{variables[2]}</div>
+            </div>
+
+            <div className="stat text-center">
+                <div className="stat-title">minutes</div>
+                <div className="stat-value">{variables[3]}</div>
+            </div>
+
+            <div className="stat text-center">
+                <div className="stat-title">seconds</div>
+                <div className="stat-value">{variables[4]}</div>
+            </div>
+
         </div>
     );
 };

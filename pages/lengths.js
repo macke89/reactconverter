@@ -9,8 +9,8 @@ const lengths = [
     {id: 3, name: "foot", rate: 3280.84},
     {id: 4, name: "yard", rate: 1093.61},
     {id: 5, name: "meter", rate: 1000},
-    {id: 6, name: "miles", rate: 1.60934},
-    {id: 7, name: "km", rate: 1},
+    {id: 6, name: "km", rate: 1},
+    {id: 7, name: "miles", rate: 0.621371},
     {id: 8, name: "nautic mile", rate: 0.539957},
 ]
 
@@ -35,6 +35,11 @@ const Lengths = () => {
                             callback={callback}
                         />
                     ))}
+                    <progress className="progress progress-primary w-56" value="0" max="100"/>
+                    <progress className="progress progress-primary w-56" value="10" max="100"/>
+                    <progress className="progress progress-primary w-56" value="40" max="100"/>
+                    <progress className="progress progress-primary w-56" value="70" max="100"/>
+                    <progress className="progress progress-primary w-56" value="100" max="100"/>
                 </div>
             </main>
             <Footer/>
