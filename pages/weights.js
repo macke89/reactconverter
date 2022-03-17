@@ -32,7 +32,8 @@ const Weights = () => {
                             name={weight.name}
                             rate={weight.rate}
                             nominator={nominator}
-                            callback={callback}/>
+                            callback={callback}
+                        />
                     ))}
                 </div>
             </main>

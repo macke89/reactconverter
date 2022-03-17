@@ -1,4 +1,4 @@
-const Input = ({id, name, rate, nominator, callback}) => {
+const Input = ({name, rate, nominator, callback}) => {
 
     function checkValue(nominator) {
         let newValue = (nominator * rate).toFixed(2)
@@ -16,7 +16,8 @@ const Input = ({id, name, rate, nominator, callback}) => {
 
     return (
         <label className="input-group input-group-vertical">
-            <span className="w-full capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">{name}</span>
+                <span
+                    className="w-full capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">{name}</span>
             <input
                 type="number"
                 placeholder={name}

@@ -32,7 +32,8 @@ const Lengths = () => {
                             name={length.name}
                             rate={length.rate}
                             nominator={nominator}
-                            callback={callback}/>
+                            callback={callback}
+                        />
                     ))}
                 </div>
             </main>

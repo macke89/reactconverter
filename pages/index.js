@@ -26,7 +26,12 @@ export default function Home() {
             <Header/>
             <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4 sm:self-center sm:w-1/2 lg:w-1/3">
                 {cards.map(card => (
-                    <IndexCard name={card.name} icon={card.icon} link={card.link}/>
+                    <IndexCard
+                        key={card.id}
+                        name={card.name}
+                        icon={card.icon}
+                        link={card.link}
+                    />
                 ))}
             </main>
             <Footer/>
