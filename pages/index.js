@@ -5,6 +5,7 @@ import IndexCard from "../components/IndexCard";
 import {GiWeight} from "react-icons/gi";
 import {BsRulers, BsClockFill, BsThermometerHalf} from "react-icons/bs";
 import {FaTemperatureLow} from "react-icons/fa";
+import Container from "../components/sections/Container";
 
 const cards = [
     {id: 1, name: "length", icon: <BsRulers size={50}/>, link: "/lengths"},
@@ -22,7 +23,7 @@ export default function Home() {
     }
 
     return (<>
-        <div data-theme="corporate" className="min-h-screen flex flex-col justify-between">
+        <Container>
             <Header/>
             <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4 sm:self-center sm:w-1/2 lg:w-1/3">
                 {cards.map(card => (
@@ -35,6 +36,6 @@ export default function Home() {
                 ))}
             </main>
             <Footer/>
-        </div>
+        </Container>
     </>)
 }

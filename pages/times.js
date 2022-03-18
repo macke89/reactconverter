@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import TimeCounter from "../components/TimeCounter";
+import Container from "../components/sections/Container";
 
 const times = [
     {name: "seconds", rate: 604800},
@@ -20,9 +21,9 @@ const Times = () => {
     }
 
     return (
-        <div className="min-h-screen flex flex-col justify-between">
+        <Container>
             <Header/>
-            <main className="flex justify-center w-full p-4">
+            <main className="flex justify-center w-full p-4 bg-accent">
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
                     <TimeCounter nominator={nominator}/>
                     {times.map(time => (
@@ -37,7 +38,7 @@ const Times = () => {
                 </div>
             </main>
             <Footer/>
-        </div>
+        </Container>
     );
 };
 

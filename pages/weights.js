@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Input from "../components/Input";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import Container from "../components/sections/Container";
 
 const weights = [
     {id: 1, name: "gram", rate: 1000000},
@@ -22,7 +23,7 @@ const Weights = () => {
     }
 
     return (
-        <div className="min-h-screen flex flex-col justify-between">
+        <Container>
             <Header/>
             <main className="flex justify-center w-full p-4">
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
@@ -38,7 +39,7 @@ const Weights = () => {
                 </div>
             </main>
             <Footer/>
-        </div>
+        </Container>
     );
 };
 

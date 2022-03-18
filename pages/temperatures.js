@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import InputC from "../components/InputC";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import Container from "../components/sections/Container";
 
 // DONE Fix this
 
@@ -35,7 +36,7 @@ const Temperatures = () => {
     }
 
     return (
-        <div className="min-h-screen flex flex-col justify-between">
+        <Container>
             <Header/>
             <main className="flex justify-center w-full p-4">
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
@@ -45,7 +46,7 @@ const Temperatures = () => {
                 </div>
             </main>
             <Footer/>
-        </div>
+        </Container>
     );
 };
 
