@@ -19,6 +19,7 @@ const Header = () => {
                 <div className="dropdown dropdown-end">
                     <label tabIndex="0" className="btn m-1 btn-secondary font-bold transition-all duration-300">Measures</label>
                     <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        {/*TODO: Add new Menu from daisy UI?*/}
                         <Link href="/lengths">
                             <a className={`btn btn-ghost ${useRouter().pathname === "/lengths" && "btn-active"}`}>Lengths</a>
                         </Link>

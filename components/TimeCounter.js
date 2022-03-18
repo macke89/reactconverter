@@ -2,16 +2,24 @@ import React from 'react';
 
 const times = (nominator) => {
     let arr = []
-    console.log(nominator % 1);
 
-    let weeks = Math.floor(nominator)
-    let days = ((nominator % 1) * 7) % 1
+    let weeks = 0
+    let days = 0
+    let hours = 0
+    let minutes = 0
+    let seconds = 0
+
+    weeks = Math.floor(nominator)
+    days = Math.floor((nominator % 1) * 7)
+    hours = Math.floor((((nominator % 1) * 7) % 1) * 24)
+    minutes = Math.floor((((((nominator % 1) * 7) % 1) * 24) % 1) * 60)
+    seconds = Math.floor((((((((nominator % 1) * 7) % 1) * 24) % 1) * 60) % 1) * 60)
 
     arr[0] = weeks
     arr[1] = days
-    arr[2] = 2
-    arr[3] = 2
-    arr[4] = 2
+    arr[2] = hours
+    arr[3] = minutes
+    arr[4] = seconds
     return arr
 }
 
@@ -19,7 +27,6 @@ const TimeCounter = ({nominator}) => {
     let variables = times(nominator)
     return (
         <div className="stats stats-horizontal lg:stats-horizontal shadow">
-            <p>{nominator}</p>
             <div className="stat text-center">
                 <div className="stat-title">Weeks</div>
                 <div className="stat-value">{variables[0]}</div>
