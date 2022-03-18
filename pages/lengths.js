@@ -37,11 +37,13 @@ const Lengths = () => {
                             callback={callback}
                         />
                     ))}
-                    <progress className="progress progress-primary w-56" value="0" max="100"/>
-                    <progress className="progress progress-primary w-56" value="10" max="100"/>
-                    <progress className="progress progress-primary w-56" value="40" max="100"/>
-                    <progress className="progress progress-primary w-56" value="70" max="100"/>
-                    <progress className="progress progress-primary w-56" value="100" max="100"/>
+                </div>
+                <div className="w-full flex flex-col gap-5 mb-2 w-full">
+                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
+                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
+                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
+                    <progress className="progress progress-primary w-full" value={nominator} max="500"/>
+                    <progress className="progress progress-primary w-full" value={nominator} max="2000"/>
                 </div>
             </ContainerMeasures>
             <Footer/>

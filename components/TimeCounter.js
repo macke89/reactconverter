@@ -26,7 +26,7 @@ const times = (nominator) => {
 const TimeCounter = ({nominator}) => {
     let variables = times(nominator)
     return (
-        <div className="stats stats-horizontal lg:stats-horizontal shadow">
+        <div className="stats stats-horizontal lg:stats-horizontal shadow m-4">
             <div className="stat text-center">
                 <div className="stat-title">Weeks</div>
                 <div className="stat-value">{variables[0]}</div>
