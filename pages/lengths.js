@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
+import ContainerMeasures from "../components/sections/ContainerMeasures";
 
 const lengths = [
     {id: 1, name: "cm", rate: 100000},
@@ -25,7 +26,7 @@ const Lengths = () => {
     return (
         <Container>
             <Header/>
-            <main className="flex justify-center w-full p-4">
+            <ContainerMeasures>
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
                     {lengths.map(length => (
                         <Input
@@ -42,7 +43,7 @@ const Lengths = () => {
                     <progress className="progress progress-primary w-56" value="70" max="100"/>
                     <progress className="progress progress-primary w-56" value="100" max="100"/>
                 </div>
-            </main>
+            </ContainerMeasures>
             <Footer/>
         </Container>
     );

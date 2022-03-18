@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
+import ContainerMeasures from "../components/sections/ContainerMeasures";
 
 const weights = [
     {id: 1, name: "gram", rate: 1000000},
@@ -25,7 +26,7 @@ const Weights = () => {
     return (
         <Container>
             <Header/>
-            <main className="flex justify-center w-full p-4">
+            <ContainerMeasures>
                 <div className="form-control w-full flex flex-col gap-5 mb-2">
                     {weights.map(weight => (
                         <Input
@@ -37,7 +38,7 @@ const Weights = () => {
                         />
                     ))}
                 </div>
-            </main>
+            </ContainerMeasures>
             <Footer/>
         </Container>
     );
