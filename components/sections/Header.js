@@ -13,7 +13,7 @@ const Header = () => {
             <nav className="navbar bg-base-200">
                 <div className="flex-1">
                     <Link href="/">
-                        <a className="btn btn-ghost normal-case text-xl">CONVERT<span className="text-cyan-700">ALL</span></a>
+                        <a className="btn btn-ghost normal-case text-xl group">CONVERT<span className="text-accent group-hover:text-accent-focus transition-all duration-100">ALL</span></a>
                     </Link>
                 </div>
                 <div className="dropdown dropdown-end">
