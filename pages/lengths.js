@@ -19,14 +19,14 @@ const lengths = [
 ]
 
 const planets = [
-    {id: 3, name: "mercury", circumference: 15329, icon: <GiPlanetCore size={25}/>},
+    {id: 1, name: "mercury", circumference: 15329, icon: <GiPlanetCore size={25}/>},
     {id: 2, name: "mars", circumference: 21344, icon: <GiPlanetCore size={25}/>},
-    {id: 4, name: "venus", circumference: 38025, icon: <GiPlanetCore size={25}/>},
-    {id: 1, name: "earth", circumference: 40075, icon: <GiEarthAfricaEurope size={25}/>},
+    {id: 3, name: "venus", circumference: 38025, icon: <GiPlanetCore size={25}/>},
+    {id: 4, name: "earth", circumference: 40075, icon: <GiEarthAfricaEurope size={25}/>},
     {id: 5, name: "neptune", circumference: 155600, icon: <GiPlanetCore size={25}/>},
     {id: 6, name: "uranus", circumference: 160590, icon: <GiPlanetCore size={25}/>},
     {id: 7, name: "saturn", circumference: 378675, icon: <GiPlanetCore size={25}/>},
-    {id: 7, name: "jupiter", circumference: 439264, icon: <GiPlanetCore size={25}/>},
+    {id: 8, name: "jupiter", circumference: 439264, icon: <GiPlanetCore size={25}/>},
 ]
 
 const Lengths = () => {

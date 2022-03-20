@@ -1,4 +1,6 @@
 import React from 'react';
+import ProgressBar from "./ProgressBar";
+import {AiOutlineMinus} from "react-icons/ai";
 
 
 const LengthProgressCard = ({nominator, icon, planets}) => {
@@ -7,28 +9,18 @@ const LengthProgressCard = ({nominator, icon, planets}) => {
             <input type="checkbox" className="peer"/>
             <div
                 className="collapse-title bg-primary text-primary-content peer-checked:bg-base-100 peer-checked:text-secondary-content">
-                <div className="flex items-center">
+                <div className="flex gap-2">
                     <span>{icon}</span>
-                    <span>Planets</span>
+                    <span className="text-2xl font-bold">Planets</span>
                 </div>
             </div>
             <div
-                className="collapse-content bg-primary text-primary-content peer-checked:bg-base-100 peer-checked:text-secondary-content">
+                className="collapse-content bg-primary text-primary-content peer-checked:bg-base-100 peer-checked:text-primary-content">
                 <div className="w-full flex flex-col gap-5 mb-2 w-full">
                     {planets.map(planet => {
+                        console.log(planet);
                         return (
-                            <div className="text-accent-content">
-                                <div>
-                                    <span className="uppercase">{planet.name}</span>
-                                    <span> - </span>
-                                    <span className="uppercase">{planet.circumference} km</span>
-                                </div>
-                                <div className="flex gap-1 items-center">
-                                    <span>{planet.icon}</span>
-                                    <progress className="progress progress-primary w-full" value={nominator}
-                                              max={planet.circumference}/>
-                                </div>
-                            </div>
+                            <ProgressBar nominator={nominator} {...planet}/>
                         )
                     })}
                 </div>
