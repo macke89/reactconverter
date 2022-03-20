@@ -43,7 +43,7 @@ const Lengths = () => {
                     <progress className="progress progress-primary w-full" value={nominator} max="100"/>
                     <progress className="progress progress-primary w-full" value={nominator} max="100"/>
                     <progress className="progress progress-primary w-full" value={nominator} max="500"/>
-                    <progress className="progress progress-primary w-full" value={nominator} max="2000"/>
+                    <progress className="progress progress-primary w-full" value={nominator} max="3451.305"/>
                 </div>
             </ContainerMeasures>
             <Footer/>

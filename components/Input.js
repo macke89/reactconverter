@@ -15,9 +15,11 @@ const Input = ({name, rate, nominator, callback}) => {
     const handleFocus = (event) => event.target.select();
 
     return (
-        <label className="input-group input-group-vertical">
+        <label className="input-group">
                 <span
-                    className="w-full capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">{name}</span>
+                    className="w-36 capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
+                    {name}
+                </span>
             <input
                 type="number"
                 placeholder={name}
