@@ -13,7 +13,7 @@ const weights = [
     {id: 5, name: "stone", rate: 157.473},
     {id: 6, name: "us ton", rate: 1.10231},
     {id: 7, name: "tonne", rate: 1},
-    {id: 8, name: "imperial ton", rate: 0.984207},
+    {id: 8, name: "imp ton", rate: 0.984207},
 ]
 
 const Weights = () => {

@@ -26,6 +26,33 @@ const times = (nominator) => {
 const TimeCounter = ({nominator}) => {
     let variables = times(nominator)
     return (
+    //     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+    //         <div className="flex flex-col">
+    // <span className="countdown font-mono text-5xl">
+    //   {variables[1]}
+    // </span>
+    //             days
+    //         </div>
+    //         <div className="flex flex-col">
+    // <span className="countdown font-mono text-5xl">
+    //   {variables[2]}
+    // </span>
+    //             hours
+    //         </div>
+    //         <div className="flex flex-col">
+    // <span className="countdown font-mono text-5xl">
+    //   {variables[3]}
+    // </span>
+    //             min
+    //         </div>
+    //         <div className="flex flex-col">
+    // <span className="countdown font-mono text-5xl">
+    //   {variables[4]}
+    // </span>
+    //             sec
+    //         </div>
+    //     </div>
+
         <div className="stats stats-horizontal lg:stats-horizontal shadow m-4">
             <div className="stat text-center">
                 <div className="stat-title">Weeks</div>
@@ -51,9 +78,9 @@ const TimeCounter = ({nominator}) => {
                 <div className="stat-title">seconds</div>
                 <div className="stat-value">{variables[4]}</div>
             </div>
-
         </div>
     );
 };
 
 export default TimeCounter;
+

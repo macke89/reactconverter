@@ -4,6 +4,8 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
 import ContainerMeasures from "../components/sections/ContainerMeasures";
+import LengthProgressCard from "../components/LengthProgressCard";
+import {GiEarthAfricaEurope, GiPlanetCore, GiRingedPlanet} from "react-icons/gi";
 
 const lengths = [
     {id: 1, name: "cm", rate: 100000},
@@ -14,6 +16,17 @@ const lengths = [
     {id: 6, name: "km", rate: 1},
     {id: 7, name: "miles", rate: 0.621371},
     {id: 8, name: "nautic mile", rate: 0.539957},
+]
+
+const planets = [
+    {id: 3, name: "mercury", circumference: 15329, icon: <GiPlanetCore size={25}/>},
+    {id: 2, name: "mars", circumference: 21344, icon: <GiPlanetCore size={25}/>},
+    {id: 4, name: "venus", circumference: 38025, icon: <GiPlanetCore size={25}/>},
+    {id: 1, name: "earth", circumference: 40075, icon: <GiEarthAfricaEurope size={25}/>},
+    {id: 5, name: "neptune", circumference: 155600, icon: <GiPlanetCore size={25}/>},
+    {id: 6, name: "uranus", circumference: 160590, icon: <GiPlanetCore size={25}/>},
+    {id: 7, name: "saturn", circumference: 378675, icon: <GiPlanetCore size={25}/>},
+    {id: 7, name: "jupiter", circumference: 439264, icon: <GiPlanetCore size={25}/>},
 ]
 
 const Lengths = () => {
@@ -38,13 +51,7 @@ const Lengths = () => {
                         />
                     ))}
                 </div>
-                <div className="w-full flex flex-col gap-5 mb-2 w-full">
-                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
-                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
-                    <progress className="progress progress-primary w-full" value={nominator} max="100"/>
-                    <progress className="progress progress-primary w-full" value={nominator} max="500"/>
-                    <progress className="progress progress-primary w-full" value={nominator} max="3451.305"/>
-                </div>
+                <LengthProgressCard planets={planets} icon={<GiRingedPlanet size={35}/>} nominator={nominator}/>
             </ContainerMeasures>
             <Footer/>
         </Container>
