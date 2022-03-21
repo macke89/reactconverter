@@ -3,29 +3,23 @@ import ProgressBar from "./ProgressBar";
 import {AiOutlineMinus} from "react-icons/ai";
 
 
-const LengthProgressCard = ({nominator, icon, planets}) => {
+const LengthProgressCard = ({nominator, name, icon, items}) => {
     return (
-        <div tabIndex="0" className="collapse">
-            <input type="checkbox" className="peer"/>
-            <div
-                className="collapse-title bg-primary text-primary-content peer-checked:bg-base-100 peer-checked:text-secondary-content">
-                <div className="flex gap-2">
-                    <span>{icon}</span>
-                    <span className="text-2xl font-bold">Planets</span>
+        <>
+            <div className="shadow-xl p-4">
+                <div className="divider">
+                    <i>{icon}</i>
+                    <h3 className="font-bold uppercase">{name}</h3>
                 </div>
-            </div>
-            <div
-                className="collapse-content bg-primary text-primary-content peer-checked:bg-base-100 peer-checked:text-primary-content">
-                <div className="w-full flex flex-col gap-5 mb-2 w-full">
-                    {planets.map(planet => {
-                        console.log(planet);
-                        return (
-                            <ProgressBar nominator={nominator} {...planet}/>
-                        )
+                <div className="flex flex-col gap-1">
+                    {items.map(item => {
+                        console.log(item);
+                        return (<ProgressBar
+                            nominator={nominator} {...item}/>)
                     })}
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
