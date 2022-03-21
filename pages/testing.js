@@ -2,35 +2,31 @@ import React from 'react';
 
 const Testing = () => {
     return (
-        <div className="container mx-auto p-6 grid grid-cols-2 gap-4">
-            <div className="col-span-1 flex flex-col bg-white border-2 p-4">
-                <h2 className="mb-2 font-bold text-2xl">Card Name</h2>
-                <div className="mb-4 flex flex-wrap">
-                    <span className="mr-2">Link 1</span>
-                    <span className="mr-2">Link 2</span>
-                </div>
-                <p className="text-md text-justify">Some Description</p>
-                <div className="flex flex-wrap mt-auto pt-3 text-xs">
-                    <p className="mr-2 mb-2">Tag #1</p>
-                    <p className="mr-2 mb-2">Tag #2</p>
-                </div>
+        <>
+            <div className="flex bg-base-200 border-2 border-black justify-between items-stretch flex-wrap">
+                <div className="h-24 bg-gray-500 text-yellow-300 w-20 border-2 border-black m-10">1</div>
+                <div className="h-36 bg-gray-500 text-yellow-300 w-32 border-2 border-black m-10">2</div>
+                <div className="h-16 bg-gray-500 text-yellow-300 w-52 border-2 border-black m-10">3</div>
             </div>
-            <div className="col-span-1 flex flex-col bg-white border-2 p-4">
-                <h2 className="mb-2 font-bold text-2xl">Card Name</h2>
-                <div className="mb-4 flex flex-wrap">
-                    <span className="mr-2">Link 1</span>
-                    <span className="mr-2">Link 2</span>
-                </div>
-                <p className="text-md text-justify">
-                    Some Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas vel enim lectus.
-                </p>
-                <div className="flex flex-wrap mt-auto pt-3 text-xs">
-                    <p className="mr-2 mb-2">Tag #1</p>
-                    <p className="mr-2 mb-2">Tag #2</p>
-                </div>
-            </div>
-        </div>
+            {/*<div className="card w-96 bg-base-100 shadow-xl">*/}
+            {/*    <div className="card-body">*/}
+            {/*        <h2 className="card-title">Card title!</h2>*/}
+            {/*        <p>If a dog chews shoes whose shoes does he choose?</p>*/}
+            {/*        <div className="card-actions justify-end">*/}
+            {/*            <button className="btn btn-primary">Buy Now</button>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            {/*<div className="card w-96 bg-base-100 shadow-xl">*/}
+            {/*    <div className="card-body">*/}
+            {/*        <h2 className="card-title">Card title!</h2>*/}
+            {/*        <p>If a dog chews shoes whose shoes does he choose?</p>*/}
+            {/*        <div className="card-actions justify-end">*/}
+            {/*            <button className="btn btn-primary">Buy Now</button>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+        </>
 
     );
 };

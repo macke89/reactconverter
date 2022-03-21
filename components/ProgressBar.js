@@ -11,7 +11,7 @@ const ProgressBar = ({nominator, name, id, value, icon, unit}) => {
                 <span> {unit}</span>
             </div>
             <div className="flex gap-4 items-center">
-                <span>{icon}</span>
+                {/*<span>{icon}</span>*/}
                 <progress className="progress progress-accent w-full" value={nominator}
                           max={value}/>
             </div>

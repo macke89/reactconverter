@@ -6,7 +6,7 @@ import {AiOutlineMinus} from "react-icons/ai";
 const LengthProgressCard = ({nominator, name, icon, items, unit}) => {
     return (
         <>
-            <div className="shadow-xl p-4 flex-1 text-base-content rounded-sm">
+            <div className="shadow-xl p-4 flex-1 text-base-content rounded-sm min-w-[16em]">
                 <div className="divider">
                     <i>{icon}</i>
                     <h3 className="font-bold uppercase text-center">{name}</h3>
