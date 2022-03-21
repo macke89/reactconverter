@@ -5,8 +5,11 @@ import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
 import ContainerMeasures from "../components/sections/ContainerMeasures";
 import LengthProgressCard from "../components/LengthProgressCard";
-import {GiEarthAfricaEurope, GiPlanetCore, GiRingedPlanet} from "react-icons/gi";
+import {GiCastle, GiCastleRuins, GiEarthAfricaEurope, GiPlanetCore, GiRingedPlanet} from "react-icons/gi";
+import {BsBuilding} from "react-icons/bs";
+import {BiBuilding} from "react-icons/bi";
 
+const mainIconSize = 25;
 const iconSize = 15;
 
 const lengths = [
@@ -31,6 +34,31 @@ const planets = [
     {id: 8, name: "jupiter", value: 439264, icon: <GiPlanetCore size={iconSize}/>},
 ]
 
+const buildings = [
+    {id: 1, name: "eiffel tower", value: 300, icon: <BiBuilding size={iconSize}/>},
+    {id: 2, name: "empire state building", value: 381, icon: <BiBuilding size={iconSize}/>},
+    {id: 3, name: "taipei", value: 508.2, icon: <BiBuilding size={iconSize}/>},
+    {id: 4, name: "one world trade center", value: 546.2, icon: <BiBuilding size={iconSize}/>},
+    {id: 5, name: "shanghai tower", value: 632, icon: <BiBuilding size={iconSize}/>},
+    {id: 6, name: "skytree tokyo", value: 634, icon: <BiBuilding size={iconSize}/>},
+    {id: 7, name: "burj khalifa", value: 829.8, icon: <BiBuilding size={iconSize}/>},
+]
+
+const oldBuildings = [
+    {id: 1, name: "colosseum", value: 48, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 2, name: "tower of pisa", value: 57, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 3, name: "notre-dame", value: 91.44, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 4, name: "big ben", value: 96, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 5, name: "st. peters basilica", value: 136.6, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 6, name: "cologne cathedral", value: 157, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 7, name: "ulm minster", value: 161.5, icon: <GiCastleRuins size={iconSize}/>},
+    {id: 8, name: "lincoln cathedral", value: 190, icon: <GiCastleRuins size={iconSize}/>},
+]
+
+function convertLength(value, rate) {
+    return value * rate
+}
+
 const Lengths = () => {
     const [nominator, setNominator] = useState(0);
 
@@ -54,15 +82,16 @@ const Lengths = () => {
                     ))}
                 </div>
                 <div className="w-full">
-                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                        <LengthProgressCard items={planets} name={"Planets"} icon={<GiRingedPlanet size={35}/>}
-                                            nominator={nominator}/>
-                        <LengthProgressCard items={planets} name={"Buildings"} icon={<GiRingedPlanet size={35}/>}
-                                            nominator={nominator}/>
-                        <LengthProgressCard items={planets} name={"Buildings"} icon={<GiRingedPlanet size={35}/>}
-                                            nominator={nominator}/>
-                        <LengthProgressCard items={planets} name={"Buildings"} icon={<GiRingedPlanet size={35}/>}
-                                            nominator={nominator}/>
+                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap inline-flex">
+                        <LengthProgressCard items={oldBuildings} name={"Historic Buildings"}
+                                            icon={<GiCastle size={mainIconSize}/>}
+                                            nominator={convertLength(nominator, 1000)} unit="M"/>
+                        <LengthProgressCard items={buildings} name={"Buildings"}
+                                            icon={<BsBuilding size={mainIconSize}/>}
+                                            nominator={convertLength(nominator, 1000)} unit="M"/>
+                        <LengthProgressCard items={planets} name={"Planets"}
+                                            icon={<GiRingedPlanet size={mainIconSize}/>}
+                                            nominator={nominator} unit="KM"/>
                     </div>
                 </div>
             </ContainerMeasures>
