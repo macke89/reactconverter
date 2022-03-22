@@ -1,9 +1,8 @@
 import React from 'react';
 
 const ProgressBar = ({nominator, name, id, value, icon, unit}) => {
-    console.log(name);
     return (
-        <div className="text-xs odd:text-neutral odd:bg-neutral-content rounded-sm p-1" key={id}>
+        <div key={id} className="text-xs odd:text-neutral odd:bg-neutral-content rounded-sm p-1">
             <div>
                 <span className="uppercase font-bold">{name}</span>
                 <span> - </span>
