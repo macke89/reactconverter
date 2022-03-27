@@ -4,6 +4,8 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
 import ContainerMeasures from "../components/sections/ContainerMeasures";
+import {CircularProgressbar} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const weights = [
     {id: 1, name: "gram", rate: 1000000},
@@ -23,11 +25,13 @@ const Weights = () => {
         setNominator(eValue)
     }
 
+    const percentage = 16;
+
     return (
         <Container>
             <Header/>
             <ContainerMeasures>
-                <div className="form-control w-full flex flex-col gap-5 mb-2">
+                <div className="form-control flex flex-col gap-5">
                     {weights.map(weight => (
                         <Input
                             key={weight.id}
@@ -38,6 +42,20 @@ const Weights = () => {
                         />
                     ))}
                 </div>
+                {/*<div className="w-full">*/}
+                {/*    <div key={1} className="shadow-xl p-4 flex-1 text-base-content rounded-sm min-w-[16em]">*/}
+                {/*        <div className="divider">*/}
+                {/*            <i>Icon</i>*/}
+                {/*            <h3 className="font-bold uppercase text-center">Name</h3>*/}
+                {/*        </div>*/}
+                {/*        <div className="flex flex-col gap-1">*/}
+                {/*            <CircularProgressbar value={percentage} text={`${percentage}%`} />;*/}
+                {/*            <CircularProgressbar value={percentage} text={`${percentage}%`} />;*/}
+                {/*            <CircularProgressbar value={percentage} text={`${percentage}%`} />;*/}
+                {/*            <div className="radial-progress" style="--value:70;">70%</div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </ContainerMeasures>
             <Footer/>
         </Container>

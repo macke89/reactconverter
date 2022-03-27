@@ -26,7 +26,7 @@ const Times = () => {
             <Header/>
             <TimeCounter nominator={nominator}/>
             <ContainerMeasures>
-                <div className="form-control w-full flex flex-col gap-5 mb-2">
+                <div className="form-control flex flex-col gap-5 mb-2">
                     {times.map(time => (
                         <Input
                             key={time.name}
