@@ -8,10 +8,17 @@ const Input = ({name, rate, nominator, callback}) => {
         return newValue
     }
 
+    document.addEventListener("wheel", (event) => {
+        if (document.activeElement.type === "number") {
+            document.activeElement.blur();
+        }
+    });
+
     const handleChange = event => {
         let value = event.target.value / rate
         callback(value)
     }
+
     const handleFocus = (event) => event.target.select();
 
     return (
