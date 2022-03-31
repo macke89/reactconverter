@@ -2,13 +2,13 @@ import React from 'react';
 
 const InputC = ({value, onChange, label}) => {
     return (
-        <label className="input-group input-group-vertical">
+        <label className="input-group input-group-vertical items-center">
             <span
-                className="w-full capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
+                className="w-56 capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
                 {label}
             </span>
             <input type="number" placeholder={label}
-                   className="input input-bordered input max-w-xs"
+                   className="w-56 input input-bordered input max-w-xs"
                    value={value}
                    onChange={onChange}
                    step={1}
