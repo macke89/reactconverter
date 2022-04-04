@@ -27,42 +27,7 @@ const TimeCounter = ({nominator}) => {
     let variables = times(nominator)
     return (
         <>
-            {/*<div className="w-full flex justify-center">*/}
-            {/*    <div className="grid grid-flow-col gap-5 text-center auto-cols-max">*/}
-            {/*        <div className="flex flex-col">*/}
-            {/*            <div className="countdown font-mono text-5xl">*/}
-            {/*                {variables[0]}*/}
-            {/*            </div>*/}
-            {/*            weeks*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col">*/}
-            {/*            <div className="countdown font-mono text-5xl">*/}
-            {/*                {variables[1]}*/}
-            {/*            </div>*/}
-            {/*            days*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col">*/}
-            {/*            <div className="countdown font-mono text-5xl">*/}
-            {/*                {variables[2]}*/}
-            {/*            </div>*/}
-            {/*            hours*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col">*/}
-            {/*            <div className="countdown font-mono text-5xl">*/}
-            {/*                {variables[3]}*/}
-            {/*            </div>*/}
-            {/*            min*/}
-            {/*        </div>*/}
-            {/*        <div className="flex flex-col">*/}
-            {/*            <div className="countdown font-mono text-5xl">*/}
-            {/*                {variables[4]}*/}
-            {/*            </div>*/}
-            {/*            sec*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
-            <div className="stats stats-horizontal lg:stats-horizontal shadow m-4">
+            <div className="stats stats-horizontal lg:stats-horizontal shadow m-4 shadow-xl">
                 <div className="stat text-center">
                     <div className="stat-title">Weeks</div>
                     <div className="stat-value">{variables[0]}</div>
