@@ -50,7 +50,7 @@ const Header = () => {
             {size.width > 600 &&
                 <nav className="btn-group">
                     {menuItems.map(menuItem => {
-                        return <MenuItem {...menuItem}/>
+                        return <MenuItem key={menuItem.id} {...menuItem}/>
                     })}
                 </nav>}
             {size.width < 600 &&
