@@ -3,6 +3,7 @@ import Link from "next/link";
 import MobileMenuItem from "../MobileMenuItem";
 import MenuItem from "../MenuItem";
 import UseWindowSize from "../customHooks/UseWindowsSize";
+import AnimatedLetters from "../animations/AnimatedLetters";
 
 const menuItems = [
     {id: 1, name: "lengths", link: "/lengths"},
@@ -13,12 +14,36 @@ const menuItems = [
 
 const Header = () => {
     const size = UseWindowSize();
+    const [letterClass, setLetterClass] = useState("text-animate");
+    const convertArray = ["c", "o", "n", "v", "e", "r", "t"];
+    const allArray = ["a", "l", "l"]
+
+    useEffect(() => {
+        return setTimeout(() => {
+            setLetterClass("text-animate-hover")
+        }, 4000)
+    }, []);
+
+
     return (
         <header className="navbar bg-base-200">
             <div className="flex-1">
                 <Link href="/">
-                    <a className="btn btn-ghost normal-case text-xl group">CONVERT<span
-                        className="text-accent group-hover:text-accent-focus transition-all duration-100">ALL</span></a>
+                    <a className="btn btn-ghost normal-case text-xl group">
+                        <span className="tracking-wide">
+                            <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={convertArray}
+                                idx={15}/>
+                        </span>
+                        <span
+                            className="text-accent group-hover:text-accent-focus transition-all duration-100 uppercase">
+                            <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={allArray}
+                                idx={22}/>
+                        </span>
+                    </a>
                 </Link>
             </div>
             {size.width > 600 &&

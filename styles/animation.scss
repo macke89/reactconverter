@@ -1,5 +1,32 @@
 @import 'animate.css';
 
+//ANIMATED LETTERS
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+.text-animate-hover {
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #1ac771;
+  }
+}
+
+@for $i from 1 through 35 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
+
+//-----------------------------------------------------------------------
+
 .btn1 {
   opacity: .5;
   transition: all 500ms;
