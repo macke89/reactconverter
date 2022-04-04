@@ -24,7 +24,7 @@ const Input = ({name, rate, nominator, callback}) => {
     return (
         <label className="input-group">
                 <span
-                    className="w-36 capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
+                    className="w-full sm:w-32 capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
                     {name}
                 </span>
             <input
