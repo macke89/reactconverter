@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import MobileMenuItem from "../MobileMenuItem";
 import MenuItem from "../MenuItem";
+import UseWindowSize from "../customHooks/UseWindowsSize";
 
 const menuItems = [
     {id: 1, name: "lengths", link: "/lengths"},
@@ -10,35 +11,8 @@ const menuItems = [
     {id: 4, name: "time", link: "/times"},
 ]
 
-function useWindowSize() {
-    // Initialize state with undefined width/height so server and client renders match
-    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-    const [windowSize, setWindowSize] = useState({
-        width: undefined,
-        height: undefined,
-    });
-    useEffect(() => {
-        // Handler to call on window resize
-        function handleResize() {
-            // Set window width/height to state
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        }
-
-        // Add event listener
-        window.addEventListener("resize", handleResize);
-        // Call handler right away so state gets updated with initial window size
-        handleResize();
-        // Remove event listener on cleanup
-        return () => window.removeEventListener("resize", handleResize);
-    }, []); // Empty array ensures that effect is only run on mount
-    return windowSize;
-}
-
 const Header = () => {
-    const size = useWindowSize();
+    const size = UseWindowSize();
     return (
         <header className="navbar bg-base-200">
             <div className="flex-1">
