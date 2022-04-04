@@ -1,4 +1,17 @@
-const Input = ({name, rate, nominator, callback}) => {
+import {useEffect} from "react";
+
+const Input = ({name, rate, nominator, callback, id}) => {
+
+    useEffect(() => {
+        return () => {
+            document.addEventListener("wheel", (event) => {
+                if (document.activeElement.type === "number") {
+                    document.activeElement.blur();
+                }
+            });
+        };
+    }, []);
+
 
     function checkValue(nominator) {
         let newValue = (nominator * rate).toFixed(2)
@@ -8,11 +21,6 @@ const Input = ({name, rate, nominator, callback}) => {
         return newValue
     }
 
-    document.addEventListener("wheel", (event) => {
-        if (document.activeElement.type === "number") {
-            document.activeElement.blur();
-        }
-    });
 
     const handleChange = event => {
         let value = event.target.value / rate
@@ -22,7 +30,7 @@ const Input = ({name, rate, nominator, callback}) => {
     const handleFocus = (event) => event.target.select();
 
     return (
-        <label className="input-group">
+        <label className="input-group" key={id}>
                 <span
                     className="w-full sm:w-32 capitalize hover:cursor-pointer group-focus:bg-red-300 font-semibold py-2 btn-primary transition-all duration-500 hover:text-white">
                     {name}

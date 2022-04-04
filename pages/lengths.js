@@ -92,15 +92,21 @@ const Lengths = () => {
                 </div>
                 <div className="w-full">
                     <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap inline-flex w-full">
-                        <LengthProgressCard items={oldBuildings} name={"Historic Buildings"}
+                        <LengthProgressCard items={oldBuildings}
+                                            name={"Historic Buildings"}
                                             icon={<GiCastle size={mainIconSize}/>}
-                                            nominator={convertLength(nominator, 1000)} unit="M"/>
-                        <LengthProgressCard items={buildings} name={"Buildings"}
+                                            nominator={convertLength(nominator, 1000)}
+                                            unit="M"/>
+                        <LengthProgressCard items={buildings}
+                                            name={"Buildings"}
                                             icon={<BsBuilding size={mainIconSize}/>}
-                                            nominator={convertLength(nominator, 1000)} unit="M"/>
-                        <LengthProgressCard items={planets} name={"Planets"}
+                                            nominator={convertLength(nominator, 1000)}
+                                            unit="M"/>
+                        <LengthProgressCard items={planets}
+                                            name={"Planets"}
                                             icon={<GiRingedPlanet size={mainIconSize}/>}
-                                            nominator={nominator} unit="KM"/>
+                                            nominator={nominator}
+                                            unit="KM"/>
                     </div>
                 </div>
             </ContainerMeasures>

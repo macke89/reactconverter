@@ -60,7 +60,7 @@ const Header = () => {
                     <div tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         {/*TODO: Add new Menu from daisy UI?*/}
                         {menuItems.map(menuItem => {
-                            return <MobileMenuItem {...menuItem}/>
+                            return <MobileMenuItem key={menuItem.id} {...menuItem}/>
                         })}
                     </div>
                 </nav>}
