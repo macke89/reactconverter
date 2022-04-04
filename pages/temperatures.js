@@ -4,6 +4,7 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Container from "../components/sections/Container";
 import ContainerMeasures from "../components/sections/ContainerMeasures";
+import Head from "next/head";
 
 // DONE Fix this
 
@@ -37,17 +38,23 @@ const Temperatures = () => {
     }
 
     return (
-        <Container>
-            <Header/>
-            <ContainerMeasures>
-                <div className="form-control w-full flex flex-col gap-5 mb-2">
-                    <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
-                    <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
-                    <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
-                </div>
-            </ContainerMeasures>
-            <Footer/>
-        </Container>
+        <>
+            <Head>
+                <title>Temperatures</title>
+            </Head>
+
+            <Container>
+                <Header/>
+                <ContainerMeasures>
+                    <div className="form-control w-full flex flex-col gap-5 mb-2">
+                        <InputC label="Celsius" value={celsius} onChange={handleCelsius}/>
+                        <InputC label="Fahrenheit" value={fahrenheit} onChange={handleFahrenheit}/>
+                        <InputC label="Kelvin" value={kelvin} onChange={handleKelvin}/>
+                    </div>
+                </ContainerMeasures>
+                <Footer/>
+            </Container>
+        </>
     );
 };
 

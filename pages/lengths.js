@@ -17,6 +17,7 @@ import {
 import {BsBuilding} from "react-icons/bs";
 import {BiBuilding} from "react-icons/bi";
 import {FaChurch} from "react-icons/fa";
+import Head from "next/head";
 
 const mainIconSize = 25;
 const iconSize = 15;
@@ -76,42 +77,48 @@ const Lengths = () => {
     }
 
     return (
-        <Container>
-            <Header/>
-            <ContainerMeasures>
-                <div className="form-control flex flex-col gap-5">
-                    {lengths.map(length => (
-                        <Input
-                            key={length.id}
-                            name={length.name}
-                            rate={length.rate}
-                            nominator={nominator}
-                            callback={callback}
-                        />
-                    ))}
-                </div>
-                <div className="w-full">
-                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap inline-flex w-full">
-                        <LengthProgressCard items={oldBuildings}
-                                            name={"Historic Buildings"}
-                                            icon={<GiCastle size={mainIconSize}/>}
-                                            nominator={convertLength(nominator, 1000)}
-                                            unit="M"/>
-                        <LengthProgressCard items={buildings}
-                                            name={"Buildings"}
-                                            icon={<BsBuilding size={mainIconSize}/>}
-                                            nominator={convertLength(nominator, 1000)}
-                                            unit="M"/>
-                        <LengthProgressCard items={planets}
-                                            name={"Planets"}
-                                            icon={<GiRingedPlanet size={mainIconSize}/>}
-                                            nominator={nominator}
-                                            unit="KM"/>
+        <>
+            <Head>
+                <title>Lengths</title>
+            </Head>
+
+            <Container>
+                <Header/>
+                <ContainerMeasures>
+                    <div className="form-control flex flex-col gap-5">
+                        {lengths.map(length => (
+                            <Input
+                                key={length.id}
+                                name={length.name}
+                                rate={length.rate}
+                                nominator={nominator}
+                                callback={callback}
+                            />
+                        ))}
                     </div>
-                </div>
-            </ContainerMeasures>
-            <Footer/>
-        </Container>
+                    <div className="w-full">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap inline-flex w-full">
+                            <LengthProgressCard items={oldBuildings}
+                                                name={"Historic Buildings"}
+                                                icon={<GiCastle size={mainIconSize}/>}
+                                                nominator={convertLength(nominator, 1000)}
+                                                unit="M"/>
+                            <LengthProgressCard items={buildings}
+                                                name={"Buildings"}
+                                                icon={<BsBuilding size={mainIconSize}/>}
+                                                nominator={convertLength(nominator, 1000)}
+                                                unit="M"/>
+                            <LengthProgressCard items={planets}
+                                                name={"Planets"}
+                                                icon={<GiRingedPlanet size={mainIconSize}/>}
+                                                nominator={nominator}
+                                                unit="KM"/>
+                        </div>
+                    </div>
+                </ContainerMeasures>
+                <Footer/>
+            </Container>
+        </>
     );
 };
 

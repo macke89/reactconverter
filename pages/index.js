@@ -6,6 +6,7 @@ import {GiWeight} from "react-icons/gi";
 import {BsRulers, BsClockFill, BsThermometerHalf} from "react-icons/bs";
 import {FaTemperatureLow} from "react-icons/fa";
 import Container from "../components/sections/Container";
+import Head from "next/head";
 
 const cards = [
     {id: 1, name: "length", icon: <BsRulers size={50}/>, link: "/lengths"},
@@ -22,20 +23,26 @@ export default function Home() {
         setShow(value)
     }
 
-    return (<>
-        <Container>
-            <Header/>
-            <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4 sm:self-center sm:w-1/2 lg:w-1/3">
-                {cards.map(card => (
-                    <IndexCard
-                        key={card.id}
-                        name={card.name}
-                        icon={card.icon}
-                        link={card.link}
-                    />
-                ))}
-            </main>
-            <Footer/>
-        </Container>
-    </>)
+    return (
+        <>
+            <Head>
+                <title>ConvertAll</title>
+            </Head>
+
+            <Container>
+                <Header/>
+                <main className="grid grid-cols-2 grid-rows-2 gap-5 p-4 sm:self-center sm:w-1/2 lg:w-1/3">
+                    {cards.map(card => (
+                        <IndexCard
+                            key={card.id}
+                            name={card.name}
+                            icon={card.icon}
+                            link={card.link}
+                        />
+                    ))}
+                </main>
+                <Footer/>
+            </Container>
+        </>
+    )
 }

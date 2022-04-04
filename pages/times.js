@@ -5,6 +5,7 @@ import Footer from "../components/sections/Footer";
 import TimeCounter from "../components/TimeCounter";
 import Container from "../components/sections/Container";
 import ContainerMeasures from "../components/sections/ContainerMeasures";
+import Head from "next/head";
 
 const times = [
     {name: "seconds", rate: 604800},
@@ -22,24 +23,30 @@ const Times = () => {
     }
 
     return (
-        <Container>
-            <Header/>
-            <TimeCounter nominator={nominator}/>
-            <ContainerMeasures>
-                <div className="form-control flex flex-col gap-5 mb-2">
-                    {times.map(time => (
-                        <Input
-                            key={time.name}
-                            name={time.name}
-                            rate={time.rate}
-                            nominator={nominator}
-                            callback={callback}
-                        />
-                    ))}
-                </div>
-            </ContainerMeasures>
-            <Footer/>
-        </Container>
+        <>
+            <Head>
+                <title>Time</title>
+            </Head>
+
+            <Container>
+                <Header/>
+                <TimeCounter nominator={nominator}/>
+                <ContainerMeasures>
+                    <div className="form-control flex flex-col gap-5 mb-2">
+                        {times.map(time => (
+                            <Input
+                                key={time.name}
+                                name={time.name}
+                                rate={time.rate}
+                                nominator={nominator}
+                                callback={callback}
+                            />
+                        ))}
+                    </div>
+                </ContainerMeasures>
+                <Footer/>
+            </Container>
+        </>
     );
 };
 
