@@ -37,7 +37,7 @@ const Header = () => {
                                 idx={15}/>
                         </span>
                         <span
-                            className="text-accent group-hover:text-accent-focus transition-all duration-100 uppercase">
+                            className="text-secondary group-hover:text-accent-content transition-all duration-100 uppercase">
                             <AnimatedLetters
                                 letterClass={letterClass}
                                 strArray={allArray}

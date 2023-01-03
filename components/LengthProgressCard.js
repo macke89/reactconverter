@@ -13,7 +13,7 @@ const LengthProgressCard = ({nominator, name, icon, items, unit, id}) => {
             <div className="flex flex-col gap-1">
                 {items.map(item => {
                     return (
-                        <ProgressBar key={item.id} nominator={nominator} {...item} unit={unit}/>
+                        <ProgressBar key={id} nominator={nominator} {...item} unit={unit}/>
                     )
                 })}
             </div>
