@@ -26,7 +26,9 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>ConvertAll</title>
+                <title>ConvertAllCC</title>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <script src="https://cdn.usefathom.com/script.js" data-site="EYDQQCSM" defer></script>
             </Head>
 
             <Container>
