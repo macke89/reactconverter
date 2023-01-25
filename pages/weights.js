@@ -12,7 +12,7 @@ const weights = [
     {id: 1, name: "gram", rate: 1000000},
     {id: 2, name: "ounce", rate: 35274},
     {id: 3, name: "kg", rate: 1000},
-    {id: 4, name: "stone", rate: 2204.62},
+    {id: 4, name: "pound", rate: 2204.62},
     {id: 5, name: "stone", rate: 157.473},
     {id: 6, name: "us ton", rate: 1.10231},
     {id: 7, name: "tonne", rate: 1},
